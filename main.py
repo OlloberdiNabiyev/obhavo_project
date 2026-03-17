@@ -1,37 +1,11 @@
-# import time
-# import asyncio
-#
-#
-# async def generate_number():
-#     for i in range(1, 11):
-#         print(i)
-#         await asyncio.sleep(1)
-#
-# async def say_message():
-#     print("Asinxrom ishladi")
-#
-# async def main():
-#     task1 = asyncio.create_task(generate_number())
-#     task2 = asyncio.create_task(say_message())
-#
-#     await   task1
-#     await task2
-#
-#     # task1 =  generate_number()
-#     # task2 =  say_message()
-#
-#     await asyncio.gather(task1, task2)
-#
-# asyncio.run(main())
-
-## --------------------------------------
 import requests
 import time
 import asyncio
 from aiohttp import ClientSession
 from watchfiles import awatch
+from Api import API_key
 
-API_key = 'b01e7608c07f15c54ff9d9b64d478705'
+API_key = API_key
 URL = "https://api.openweathermap.org/data/2.5/weather"
 
 async def weather(city_name):
